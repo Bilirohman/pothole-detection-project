@@ -4,7 +4,7 @@ Proyek ini adalah sebuah purwarupa (prototype) aplikasi berbasis AI untuk menduk
 
 Dibuat menggunakan **Python** dengan model AI **YOLOv8** dan antarmuka pengguna (UI) yang interaktif menggunakan **Streamlit**.
 
-## 1. Problem yang Diselesaikan (Kemampuan Model)
+## 1. Problem yang Diselesaikan
 
 Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi yang manual dan subjektif. Model AI ini dirancang untuk mengatasi masalah tersebut dengan kemampuan sebagai berikut:
 
