@@ -43,8 +43,6 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 ---
 ## Langkah-Langkah Implementasi Proyek
 
-Berikut adalah gambaran umum bagaimana proyek ini dapat dibangun dari awal hingga akhir.
-
 #### 1. Persiapan Lingkungan
 * Buat lingkungan virtual (misalnya dengan `venv` atau `conda`).
 * Instal semua library yang dibutuhkan: `torch`, `ultralytics`, `streamlit`, `opencv-python`, `pandas`.
@@ -78,16 +76,16 @@ Berikut adalah gambaran umum bagaimana proyek ini dapat dibangun dari awal hingg
 * Buat fungsi untuk menerima file gambar/video, menjalankannya melalui model, dan menggambar hasil deteksi (kotak dan label) pada gambar/video tersebut menggunakan OpenCV.
 
 ## 📁 Struktur Folder Proyek (Saran)
-pothole-detection-project/
-│
-├── 📜 app.py                # File utama aplikasi Streamlit
-├── 🐍 train.py              # Skrip untuk melatih model YOLOv8
-├── ⚙️ prepare_dataset.py    # Skrip untuk memproses dataset (opsional tapi penting)
-├── 📦 model/
-│   └── (kosongkan dulu, isi dengan best.pt setelah training)
-│
-├── 🖼️ dataset/
-│   └── config.yaml         # File konfigurasi dataset untuk YOLO
-│
-├── 📄 requirements.txt      # Daftar library Python yang dibutuhkan
-└── 📝 README.md             # File deskripsi proyek (dari jawaban sebelumnya)
+- pothole-detection-project/
+- │
+- ├── 📜 app.py                # File utama aplikasi Streamlit
+- ├── 🐍 train.py              # Skrip untuk melatih model YOLOv8
+- ├── ⚙️ prepare_dataset.py    # Skrip untuk memproses dataset (opsional tapi penting)
+- ├── 📦 model/
+- │   └── (kosongkan dulu, isi dengan best.pt setelah training)
+- │
+- ├── 🖼️ dataset/
+- │   └── config.yaml         # File konfigurasi dataset untuk YOLO
+- │
+- ├── 📄 requirements.txt      # Daftar library Python yang dibutuhkan
+- └── 📝 README.md             # File deskripsi proyek (dari jawaban sebelumnya)
