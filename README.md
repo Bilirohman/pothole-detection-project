@@ -45,20 +45,20 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 
 #### 1. Persiapan Lingkungan
 * Instal semua library yang dibutuhkan: `streamlit`, `ultralytics`, `opencv-python-headless`, `Pillow`, `pandas`.
-    ```python
-    pip install streamlit ultralytics opencv-python-headless pandas Pillow
-    ```
+```python
+pip install streamlit ultralytics opencv-python-headless pandas Pillow
+```
 
 #### 2. Mempersiapkan Dataset 
 * Unduh dan siapkan dataset yang telah dilabeli ulang ke dalam 3 kelas.
-    ```python
-    python prepare_dataset.py
-    ```
+```python
+python prepare_dataset.py
+```
 
 #### 3. Melatih Model YOLOv8
-   ```python
-   python train.py
-   ```
+```python
+python train.py
+```
     
 #### 4. Pembuatan Aplikasi Streamlit (`app.py`)
 * **Fitur UI:**
