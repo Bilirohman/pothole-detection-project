@@ -29,8 +29,8 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 ## 3. Dataset
 
 * **Nama Dataset:** **Pothole Detection Dataset**
-* **Sumber & Link:** [Kaggle: Pothole Detection Dataset](https://www.kaggle.com/datasets/atulyakumarojha/pothole-detection-dataset)
-* **Deskripsi:** Dataset ini berisi ratusan gambar jalan dari berbagai kondisi dan sudut pandang, di mana setiap lubang telah diberi anotasi (diberi kotak pembatas).
+* **Sumber & Link:** [Roboflow: Pothole Detection Dataset]([https://www.kaggle.com/datasets/atulyakumarojha/pothole-detection-dataset](https://universe.roboflow.com/jerry-cooper-tlzkx/pothole_detection-hfnqo))
+* **Deskripsi:** Dataset ini berisi ribuan gambar jalan dari berbagai kondisi dan sudut pandang, di mana setiap lubang telah diberi anotasi (diberi kotak pembatas).
 * **Klasifikasi:**
     Dataset aslinya kemungkinan hanya memiliki satu kelas, yaitu `pothole`. Untuk memenuhi kebutuhan klasifikasi tingkat kerusakan (`ringan`, `sedang`, `berat`), langkah tambahan perlu dilakukan:
     1.  **Pra-pemrosesan & Pelabelan Ulang:** Sebelum pelatihan, data anotasi dari dataset ini perlu dimodifikasi. Kita dapat membuat skrip kecil untuk mengklasifikan setiap *bounding box* `pothole` menjadi tiga kelas baru berdasarkan luas relatifnya terhadap ukuran gambar.
@@ -44,36 +44,31 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 ## Langkah-Langkah Implementasi Proyek
 
 #### 1. Persiapan Lingkungan
-* Buat lingkungan virtual (misalnya dengan `venv` atau `conda`).
-* Instal semua library yang dibutuhkan: `torch`, `ultralytics`, `streamlit`, `opencv-python`, `pandas`.
-
-#### 2. Pelatihan Model YOLOv8
-* Unduh dan siapkan dataset yang telah dilabeli ulang ke dalam 3 kelas.
-* Buat file konfigurasi dataset (`data.yaml`) untuk YOLO.
-* Jalankan skrip pelatihan Python menggunakan library `ultralytics`.
+* Instal semua library yang dibutuhkan: `streamlit`, `ultralytics`, `opencv-python-headless`, `Pillow`, `pandas`.
     ```python
-    from ultralytics import YOLO
-
-    # Load pre-trained model
-    model = YOLO('yolov8n.pt') 
-
-    # Train the model on custom dataset
-    results = model.train(data='config.yaml', epochs=50, imgsz=640)
-
-    # Hasil terbaik akan tersimpan di folder runs/detect/train/weights/best.pt
+    pip install streamlit ultralytics opencv-python-headless pandas Pillow
     ```
 
-#### 3. Pembuatan Aplikasi Streamlit (`app.py`)
-* Buat skrip Python untuk UI.
+#### 2. Mempersiapkan Dataset 
+* Unduh dan siapkan dataset yang telah dilabeli ulang ke dalam 3 kelas.
+    ```python
+    python prepare_dataset.py
+    ```
+
+#### 3. Melatih Model YOLOv8
+    ```python
+    python train.py
+    ```
+
+#### 4. Pembuatan Aplikasi Streamlit (`app.py`)
 * **Fitur UI:**
     * Judul dan deskripsi aplikasi.
     * Opsi untuk mengunggah file gambar (`jpg`, `png`) atau video (`mp4`).
     * Tombol "Proses" untuk menjalankan deteksi.
     * Area untuk menampilkan output (gambar/video dengan *bounding box*).
-
-#### 4. Integrasi Model dengan Streamlit
-* Muat model YOLOv8 yang sudah dilatih (`best.pt`) di dalam aplikasi Streamlit.
-* Buat fungsi untuk menerima file gambar/video, menjalankannya melalui model, dan menggambar hasil deteksi (kotak dan label) pada gambar/video tersebut menggunakan OpenCV.
+    ```python
+    streamlit run app.py
+    ```
 
 ## 📁 Struktur Folder Proyek (Saran)
 - pothole-detection-project/
