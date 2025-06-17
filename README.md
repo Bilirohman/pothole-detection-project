@@ -1,8 +1,6 @@
 # Proyek AI: Deteksi & Klasifikasi Kerusakan Jalan untuk Smart City
 
-Proyek ini adalah sebuah purwarupa (prototype) aplikasi berbasis AI untuk mendukung inisiatif **Smart City** di Indonesia. Aplikasi ini mampu mendeteksi kerusakan jalan (jalan berlubang) secara otomatis melalui gambar atau video dan mengklasifikasikan tingkat keparahannya.
-
-Dibuat menggunakan **Python** dengan model AI **YOLOv8** dan antarmuka pengguna (UI) yang interaktif menggunakan **Streamlit**.
+Model AI ini mampu mendeteksi kerusakan jalan (jalan berlubang) secara otomatis melalui gambar atau video dan mengklasifikasikan tingkat keparahannya. Dibuat menggunakan **Python** dengan model AI **YOLOv8** dan antarmuka pengguna (UI) yang interaktif menggunakan **Streamlit**.
 
 ## 1. Problem yang Diselesaikan
 
