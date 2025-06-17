@@ -1,0 +1,18 @@
+# File: dataset/config.yaml (VERSI PERBAIKAN FINAL)
+
+# Path ke direktori dataset utama, relatif dari tempat Anda menjalankan skrip (pothole/)
+path: ./dataset
+
+# Direktori gambar train dan valid (relatif terhadap 'path' di atas)
+train: train/images
+val: valid/images
+test: test/images
+
+# Jumlah kelas
+nc: 3
+
+# Nama kelas
+names:
+  0: Kerusakan Ringan
+  1: Kerusakan Sedang
+  2: Kerusakan Berat
