@@ -21,10 +21,9 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 * **Model:** **YOLOv8 (You Only Look Once version 8)**.
 * **Arsitektur:** YOLO adalah model *object detection* canggih yang terkenal karena kecepatan dan akurasinya yang tinggi. Model ini mampu memproses gambar dalam satu kali proses (hence, *You Only Look Once*) untuk mendeteksi berbagai objek beserta lokasinya.
 * **Proses Pelatihan (Training):**
-    1.  Kami menggunakan *transfer learning* dari model YOLOv8 yang sudah dilatih pada dataset besar.
-    2.  Model tersebut kemudian dilatih ulang (*fine-tuning*) menggunakan dataset spesifik berisi gambar-gambar jalan berlubang.
-    3.  Selama pelatihan, model belajar mengenali pola visual dari tiga kelas yang kita definisikan: `ringan`, `sedang`, dan `berat`.
-    4.  Hasil akhirnya adalah sebuah file bobot (`.pt`) yang berisi "pengetahuan" model untuk melakukan deteksi spesifik ini.
+    1.  Model tersebut kami latih menggunakan dataset spesifik dari roboflox berisikan gambar-gambar jalan berlubang.
+    2.  Selama pelatihan, model belajar mengenali pola visual dari tiga kelas yang kita definisikan: `ringan`, `sedang`, dan `berat`.
+    3.  Hasil akhirnya adalah sebuah file bobot (`.pt`) yang berisi "pengetahuan" model untuk melakukan deteksi spesifik ini.
 
 ## 3. Dataset
 
@@ -32,7 +31,7 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 * **Sumber & Link:** [Roboflow: Pothole Detection Dataset](https://universe.roboflow.com/jerry-cooper-tlzkx/pothole_detection-hfnqo)
 * **Deskripsi:** Dataset ini berisi ribuan gambar jalan dari berbagai kondisi dan sudut pandang, di mana setiap lubang telah diberi anotasi (diberi kotak pembatas).
 * **Klasifikasi:**
-    Dataset aslinya kemungkinan hanya memiliki satu kelas, yaitu `pothole`. Untuk memenuhi kebutuhan klasifikasi tingkat kerusakan (`ringan`, `sedang`, `berat`), langkah tambahan perlu dilakukan:
+    Dataset aslinya kemungkinan hanya memiliki satu kelas, yaitu `pothole`. Untuk memenuhi kebutuhan klasifikasi tingkat kerusakan (`ringan`, `sedang`, `berat`)
     1.  **Pra-pemrosesan & Pelabelan Ulang:** Sebelum pelatihan, data anotasi dari dataset ini perlu dimodifikasi. Kita dapat membuat skrip kecil untuk mengklasifikan setiap *bounding box* `pothole` menjadi tiga kelas baru berdasarkan luas relatifnya terhadap ukuran gambar.
     2.  **Contoh Logika Sederhana:**
         * Jika luas *bounding box* < 2% dari luas gambar -> `Kerusakan Ringan`.
