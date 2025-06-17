@@ -66,9 +66,9 @@ python train.py
     * Opsi untuk mengunggah file gambar (`jpg`, `png`) atau video (`mp4`).
     * Tombol "Proses" untuk menjalankan deteksi.
     * Area untuk menampilkan output (gambar/video dengan *bounding box*).
-    ```python
-    streamlit run app.py
-    ```
+```python
+streamlit run app.py
+```
 
 ## 📁 Struktur Folder Proyek (Saran)
 - pothole-detection-project/
