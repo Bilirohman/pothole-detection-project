@@ -18,8 +18,6 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 
 ## 2. Model AI yang Digunakan
 
-Untuk tugas ini, kita tidak menggunakan API dari AI yang sudah jadi, melainkan melatih model kita sendiri.
-
 * **Model:** **YOLOv8 (You Only Look Once version 8)**.
 * **Arsitektur:** YOLO adalah model *object detection* canggih yang terkenal karena kecepatan dan akurasinya yang tinggi. Model ini mampu memproses gambar dalam satu kali proses (hence, *You Only Look Once*) untuk mendeteksi berbagai objek beserta lokasinya.
 * **Proses Pelatihan (Training):**
@@ -30,12 +28,10 @@ Untuk tugas ini, kita tidak menggunakan API dari AI yang sudah jadi, melainkan m
 
 ## 3. Dataset
 
-Dataset adalah komponen paling krusial dalam melatih model AI yang akurat. Untuk proyek ini, kita menggunakan dataset publik yang telah dianotasi.
-
 * **Nama Dataset:** **Pothole Detection Dataset**
 * **Sumber & Link:** [Kaggle: Pothole Detection Dataset](https://www.kaggle.com/datasets/atulyakumarojha/pothole-detection-dataset)
 * **Deskripsi:** Dataset ini berisi ratusan gambar jalan dari berbagai kondisi dan sudut pandang, di mana setiap lubang telah diberi anotasi (diberi kotak pembatas).
-* **⭐ Catatan Penting Mengenai Klasifikasi:**
+* **Klasifikasi:**
     Dataset aslinya kemungkinan hanya memiliki satu kelas, yaitu `pothole`. Untuk memenuhi kebutuhan klasifikasi tingkat kerusakan (`ringan`, `sedang`, `berat`), langkah tambahan perlu dilakukan:
     1.  **Pra-pemrosesan & Pelabelan Ulang:** Sebelum pelatihan, data anotasi dari dataset ini perlu dimodifikasi. Kita dapat membuat skrip kecil untuk mengklasifikan setiap *bounding box* `pothole` menjadi tiga kelas baru berdasarkan luas relatifnya terhadap ukuran gambar.
     2.  **Contoh Logika Sederhana:**
