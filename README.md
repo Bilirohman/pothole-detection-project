@@ -1,10 +1,10 @@
-# 🤖 Proyek AI: Deteksi & Klasifikasi Kerusakan Jalan untuk Smart City
+# Proyek AI: Deteksi & Klasifikasi Kerusakan Jalan untuk Smart City
 
 Proyek ini adalah sebuah purwarupa (prototype) aplikasi berbasis AI untuk mendukung inisiatif **Smart City** di Indonesia. Aplikasi ini mampu mendeteksi kerusakan jalan (jalan berlubang) secara otomatis melalui gambar atau video dan mengklasifikasikan tingkat keparahannya.
 
 Dibuat menggunakan **Python** dengan model AI **YOLOv8** dan antarmuka pengguna (UI) yang interaktif menggunakan **Streamlit**.
 
-## 🎯 1. Problem yang Diselesaikan (Kemampuan Model)
+## 1. Problem yang Diselesaikan (Kemampuan Model)
 
 Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi yang manual dan subjektif. Model AI ini dirancang untuk mengatasi masalah tersebut dengan kemampuan sebagai berikut:
 
@@ -16,7 +16,7 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 * **⚡ Efisiensi Pelaporan:** Mempercepat proses pemetaan area jalan yang rusak, memungkinkan dinas terkait untuk memprioritaskan perbaikan secara lebih efektif dan berbasis data.
 * **🖥️ Visualisasi Interaktif:** Antarmuka Streamlit menampilkan gambar/video asli beserta hasil deteksi (kotak pembatas/bounding box) yang diberi label dan warna sesuai tingkat kerusakan, sehingga mudah dipahami oleh siapa saja.
 
-## 🧠 2. Model AI yang Digunakan
+## 2. Model AI yang Digunakan
 
 Untuk tugas ini, kita tidak menggunakan API dari AI yang sudah jadi, melainkan melatih model kita sendiri.
 
@@ -28,7 +28,7 @@ Untuk tugas ini, kita tidak menggunakan API dari AI yang sudah jadi, melainkan m
     3.  Selama pelatihan, model belajar mengenali pola visual dari tiga kelas yang kita definisikan: `ringan`, `sedang`, dan `berat`.
     4.  Hasil akhirnya adalah sebuah file bobot (`.pt`) yang berisi "pengetahuan" model untuk melakukan deteksi spesifik ini.
 
-## 💾 3. Dataset
+## 3. Dataset
 
 Dataset adalah komponen paling krusial dalam melatih model AI yang akurat. Untuk proyek ini, kita menggunakan dataset publik yang telah dianotasi.
 
@@ -45,7 +45,7 @@ Dataset adalah komponen paling krusial dalam melatih model AI yang akurat. Untuk
         Ambang batas (threshold) ini dapat disesuaikan untuk mendapatkan hasil terbaik.
 
 ---
-## 🛠️ Langkah-Langkah Implementasi Proyek
+## Langkah-Langkah Implementasi Proyek
 
 Berikut adalah gambaran umum bagaimana proyek ini dapat dibangun dari awal hingga akhir.
 
