@@ -29,7 +29,7 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 ## 3. Dataset
 
 * **Nama Dataset:** **Pothole Detection Dataset**
-* **Sumber & Link:** [Roboflow: Pothole Detection Dataset]([https://www.kaggle.com/datasets/atulyakumarojha/pothole-detection-dataset](https://universe.roboflow.com/jerry-cooper-tlzkx/pothole_detection-hfnqo))
+* **Sumber & Link:** [Roboflow: Pothole Detection Dataset](https://universe.roboflow.com/jerry-cooper-tlzkx/pothole_detection-hfnqo)
 * **Deskripsi:** Dataset ini berisi ribuan gambar jalan dari berbagai kondisi dan sudut pandang, di mana setiap lubang telah diberi anotasi (diberi kotak pembatas).
 * **Klasifikasi:**
     Dataset aslinya kemungkinan hanya memiliki satu kelas, yaitu `pothole`. Untuk memenuhi kebutuhan klasifikasi tingkat kerusakan (`ringan`, `sedang`, `berat`), langkah tambahan perlu dilakukan:
