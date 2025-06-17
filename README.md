@@ -21,7 +21,7 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
 * **Model:** **YOLOv8 (You Only Look Once version 8)**.
 * **Arsitektur:** YOLO adalah model *object detection* canggih yang terkenal karena kecepatan dan akurasinya yang tinggi. Model ini mampu memproses gambar dalam satu kali proses (hence, *You Only Look Once*) untuk mendeteksi berbagai objek beserta lokasinya.
 * **Proses Pelatihan (Training):**
-    1.  Kami menggunakan *transfer learning* dari model YOLOv8 yang sudah dilatih pada dataset besar (seperti COCO).
+    1.  Kami menggunakan *transfer learning* dari model YOLOv8 yang sudah dilatih pada dataset besar.
     2.  Model tersebut kemudian dilatih ulang (*fine-tuning*) menggunakan dataset spesifik berisi gambar-gambar jalan berlubang.
     3.  Selama pelatihan, model belajar mengenali pola visual dari tiga kelas yang kita definisikan: `ringan`, `sedang`, dan `berat`.
     4.  Hasil akhirnya adalah sebuah file bobot (`.pt`) yang berisi "pengetahuan" model untuk melakukan deteksi spesifik ini.
@@ -56,10 +56,10 @@ Pelaporan dan perbaikan jalan rusak seringkali lambat karena proses identifikasi
     ```
 
 #### 3. Melatih Model YOLOv8
-    ```python
-    python train.py
-    ```
-
+   ```python
+   python train.py
+   ```
+    
 #### 4. Pembuatan Aplikasi Streamlit (`app.py`)
 * **Fitur UI:**
     * Judul dan deskripsi aplikasi.
