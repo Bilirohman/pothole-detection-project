@@ -1,0 +1,8 @@
+# File: requirements.txt
+
+streamlit
+ultralytics
+opencv-python-headless
+pandas
+Pillow
+
